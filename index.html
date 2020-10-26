@@ -26,8 +26,7 @@
         display: none;
         background-color: white;
         border: black 2px;
-        height: 450px;
-        width: 70%;
+        width: 80%;
         position: absolute;
         top: 5%;
         border-radius: 5px;
@@ -40,6 +39,16 @@
       }
       body{
         background-color: rgb(233, 230, 230)
+      }
+      .dim{
+        clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+        background-image: linear-gradient(to bottom left, cornflowerblue,black); 
+        width: 100%;
+      }
+      .dim-1{
+        border-radius:100% 100% 1% 100% / 0% 100% 0% 100% ;
+        background-image: linear-gradient(to bottom left,black,cornflowerblue); 
+        width: 100%;
       }
       .dark-mode {
         background-color: rgb(51, 51, 51);
@@ -58,6 +67,10 @@
       }
       .progress{
         margin: 5%;
+        width: 70%;
+      }
+      h6{
+        text-shadow: 0px 0px 2px white;
       }
     </style>
 
@@ -190,7 +203,7 @@
 
     <!-- gallery -->
 
-    <div class="container" style="clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);background-image: linear-gradient(to bottom left, cornflowerblue,black); width: 100%;">
+    <div class="container dim">
       <br><br><br><br><br><br>
       <h2 align="right" style="font-family: 'Piedra', cursive;color: white;"><a name="gallery">Gallery</a></h2>
       <hr style="font-family: 'Piedra', cursive;" size="5px" width="45%" align="right" color="white">
@@ -228,7 +241,7 @@
 
     <!-- contact us -->
 
-    <div class="container" style="background-color: rgb(233, 230, 230);border-radius:100% 100% 1% 100% / 0% 100% 0% 100% ;background-image:linear-gradient(to bottom right, black,cornflowerblue);"><br><br>
+    <div class="container dim-1" style="background-color: rgb(233, 230, 230);background-image:linear-gradient(to bottom right, black,cornflowerblue);"><br><br>
       <h2 style="font-family: 'Piedra', cursive;color: white;"><a name="contact_us">Contact Us</a></h2>
       <hr style="font-family: 'Piedra', cursive;" size="5px" width="45%" align="left" color="white">
       <hr style="font-family: 'Piedra', cursive;" size="5px" width="45%" align="left" color="white"><br>
@@ -262,7 +275,7 @@
           <hr style="font-family: 'Piedra', cursive;" size="5px" width="25%" align="center" color="white">
           <h4 style="font-family: 'Sansita Swashed', cursive;color: white;" align="center">Ashish Chandra</h4>
           <hr style="font-family: 'Piedra', cursive;" size="5px" width="25%" align="center" color="white"><br>
-          <p style="font-family: 'Piedra', cursive;color: white;" align="center">© copyright2020 Ashish Chandra all rights were reserved</p>
+          <p style="font-family: 'Piedra', cursive;color: white;" align="center">© copyright2020 Ashish Chandra. All rights are reserved</p>
         </div>
       </div>
 
@@ -277,6 +290,8 @@
       function myFunction() {
         var element = document.body;
          element.classList.toggle("dark-mode");
+        var elemen = document.getElementsByClassName('dim');
+         elemen.classList.toggle("dim-mode")
       }
 
       function myFun(){
