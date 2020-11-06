@@ -1,0 +1,956 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Grenze+Gotisch:wght@300&family=Sansita+Swashed:wght@500&family=Source+Code+Pro:wght@500&family=Tillana&family=Kalam&display=swap');
+
+$primary: #007bff;
+$danger:#dc3545;
+$warning: #ffc107;
+$dark: #343a40;
+$secondary: #6c757d;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+html{
+    scroll-behavior: smooth;
+    transition: all 0.2s ease-in-out;
+    body{
+        background-color: gainsboro;
+        #bar{
+            nav{
+                @media (max-width:358px) {
+                   min-height: 3.5rem;
+                   padding-top: 2.25rem;
+                }
+                font-size: 1.5rem !important;
+                h3{
+                    font-family: 'Sansita Swashed', cursive;
+                    text-shadow: 2px 2px 10px $primary;
+                    padding-right: 4rem;
+                    @media (max-width:358px) {
+                        position: absolute;
+                        top: 0.7rem;
+                        left: 0.5rem;
+                        font-size: 1.5rem;
+                        z-index: 9999999;
+                    }
+                }
+                #tog{
+                    @media (max-width:358px) {
+                        position: absolute;
+                        z-index: 99999999;
+                        right: 0.5rem;
+                        top: 0.5rem;
+                    }
+                }
+                li{
+                    display: grid;
+                    .nav-on{
+                        padding-right:3rem ;
+                        font-size: 1rem;
+                        font-family: 'Sansita Swashed', cursive;
+                        &::before{
+                            content: " ";
+                            position: absolute;
+                            width: 0%;
+                            height: 1.75rem;
+                            border-bottom: 2px solid $primary;
+                            transition: all 0.4s linear;
+                        }
+                        &:hover::before{
+                            width: 5rem;
+                        }
+                        &.active::before{
+                            width: 5rem;
+                        }
+                    }
+                }
+                #rat{
+                    margin-top:1rem;
+                    font-family: 'Sansita Swashed', cursive;
+                }
+                #collapseExample{
+                    position: absolute;
+                    top: 5.75rem;
+                    right: 1rem;
+                    left: 1rem;
+                    #cross{
+                        color: $danger;
+                        i{
+                            height: 3rem;
+                            position: absolute;
+                            right: 0.5rem;
+                            top: 0.4rem;
+                            &:hover{
+                                transform: translateY(-0.3rem);
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+                    .progress{
+                        height: 2rem;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+        #home{
+            border: 2.5px dashed gainsboro;
+            top: 0;
+            background-image: linear-gradient(rgba(52, 58, 64, 0.7),rgba(52, 58, 64, 0.7)), url("../IMAGES/home.jpg");
+            width: 100%;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+            border:2px dashed $dark;
+            background-clip: content-box;
+            padding: 2.5px;
+            min-height: 130vh;
+            h6{
+                top: 0;
+            }
+            #wel{
+                width: 100%;
+                h1{
+                    font-family: 'Grenze Gotisch', cursive;
+                    text-transform: capitalize;
+                    position: relative;
+                    margin-top: 15vh;
+                    color: white;
+                    span{
+                        color: $primary;
+                    }
+                    &::after{
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        display: flex;
+                        font-size: 1.5rem;
+                        height: 1rem;
+                        width: 20vw;
+                        place-content: center;
+                        font-weight: 900;
+                        font-family: "Font Awesome 5 Free";
+                        content: "\f005";
+                        color: $primary;
+                        border-bottom: 2px solid white;
+                    }
+                }
+                #type{
+                    font-family: 'Tillana', cursive;
+                    color: white;
+                    margin-top: 10vh;
+                    span{
+                        color: $primary;
+                    }
+                    #wo{
+                        border: 1px solid $primary;
+                        border-radius: 1rem;
+                        margin: 0.5rem;
+                        padding: 0.5rem 0rem 0.3rem 0rem;
+                    }
+                }
+                #share{
+                    margin: 0.5rem auto 0.5rem;
+                    display: flex;
+                    justify-content: center;
+                    .fa {
+                        color: white;
+                        font-size: 2rem;
+                        height: 3rem;
+                        width: 3rem;
+                        text-align: center;
+                        text-decoration: none;
+                        margin: auto;
+                        border-radius: 50%;
+                        border:2px dashed white;
+                        background-clip: content-box;
+                        padding: 2.5px;
+                        transition-duration: 0.25s;
+                        transition-delay: 0.05s;
+                        transition-timing-function: ease-in-out;
+                        &:hover {
+                            opacity: 0.5;
+                            transform: translateY(-1rem);
+                        }
+                    }
+                    .fa-whatsapp {
+                        background: #0d943a;
+                        padding: 0.4rem 0.5rem 0.6rem 0.5rem;
+                    }
+                    .fa-facebook {
+                        background: #3B5998;
+                        padding: 0.5rem;
+                    }
+                    .fa-twitter{
+                        background: #55ACEE;
+                        padding: 0.5rem;
+                    }
+                    .fa-telegram{
+                        background: #55ACEE;
+                        padding: 0.4rem 0.55rem 0.6rem 0.45rem;
+                    }
+                }
+            }
+            .slide-in{
+                font-size: 5rem;
+                position: absolute;
+                bottom: -5rem;
+                left: 0;
+                display: block;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                .pointer{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 2rem;
+                    height: 4rem;
+                    transform: translate(-50%, -50%);
+                    border: 2px solid #fff;
+                    border-radius: 26px;
+                    &::after{
+                        position: absolute;
+                        top: 5px;
+                        left: 50%;
+                        width: 4px;
+                        height: 4px;
+                        margin-left: -2px;
+                        content: '';
+                        transform: translateY(0) scaleY(1) scaleX(1) translateZ(0);
+                        animation: scroll 1.5s -1s cubic-bezier(.68, -.55, .265, 1.55) infinite;
+                        opacity: 1;
+                        border-radius: 100%;
+                        background-color: #fff;
+                        @keyframes scroll{
+                            0%, 20% {
+                                transform: translateY(0) scaleY(1) scaleX(1) translateZ(0)
+                                }
+                                10% {
+                                transform: translateY(0) scaleY(1.2) scaleX(1.2) translateZ(0);
+                                opacity: 1;
+                                }
+                                to {
+                                transform: translateY(20px) scaleY(2.5) scaleX(.5) translateZ(0);
+                                opacity: .01;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #gallery{
+            width: 100%;
+            .he{
+                background-color: gainsboro;
+            }
+            #head{
+                border-bottom: 1px dashed $secondary;
+                border-top: 1px dashed $secondary;
+                padding-bottom: 2rem;
+                h2{
+                    font-family: 'Grenze Gotisch', cursive;
+                    text-align: center;
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                    color: $dark;
+                    &::after{
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        display: flex;
+                        font-size: 1.5rem;
+                        height: 1rem;
+                        width: 20vw;
+                        place-content: center;
+                        font-weight: 900;
+                        font-family: "Font Awesome 5 Free";
+                        content: "\f005";
+                        color: $primary;
+                        border-bottom: 2px solid $secondary;
+                    }
+                }
+            }
+            .row{
+                div{
+                    padding: auto;
+                    .card{
+                        background-color: white;
+                        font-family: 'Kalam', cursive;
+                        margin: 0 auto 2rem;
+                        transition-duration: 0.5s;
+                        transition-delay: 0.15s;
+                        transition-timing-function: ease-in-out;
+                        &:hover{
+                            box-shadow: 0px 0px 10px $dark;
+                        }
+                        .overlay{
+                            position: absolute;
+                            background-color: transparent;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .poem{
+                            position: absolute;
+                            color: $dark;
+                            width: 100%;
+                            padding: 3rem;
+                            .p2{
+                                padding-left: 3rem;
+                            }
+                            .p3{
+                                padding-left: 6rem;
+                            }
+                            h5{
+                                text-align: right;
+                            }
+                        }
+                    }
+                }
+                #c2{
+                    .alert{
+                        font-family: 'Sansita Swashed', cursive;
+                        text-align: center;
+                        margin: 0rem auto 2rem;
+                        border:2px dashed $primary;
+                        background-clip: content-box;
+                        padding: 2.5px;
+                        transition-duration: 0.5s;
+                        transition-delay: 0.15s;
+                        transition-timing-function: ease-in-out;
+                        &:hover{
+                            box-shadow: 0px 0px 10px $dark;
+                        }
+                        @media (max-width:1200px) {
+                            margin: 0rem auto 2rem;
+                        }
+                    }
+                }
+                #etc{
+                    margin: 7.5rem auto 7.5rem;
+                    border:2px dashed $secondary;
+                    background-clip: content-box;
+                    padding: 2.5px;
+                    transition-duration: 0.5s;
+                    transition-delay: 0.15s;
+                    transition-timing-function: ease-in-out;
+                    @media (max-width:1200px) {
+                        margin: 0rem auto 2rem;
+                    }
+                    h6{
+                        font-size: 1rem;
+                        font-weight: bold;
+                        color: $primary;
+                    }
+                }
+            }
+        }
+        #contact_us{
+            padding-top: 2rem;
+            width: 100%;
+            border-bottom: 2px 2px 2px $dark;
+            .he{
+                background-color: gainsboro;
+            }
+            #head{
+                border-bottom: 1px dashed $secondary;
+                border-top: 1px dashed $secondary;
+                padding-bottom: 2rem;
+                h2{
+                    font-family: 'Grenze Gotisch', cursive;
+                    text-align: center;
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                    color: $dark;
+                    &::after{
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        display: flex;
+                        font-size: 1.5rem;
+                        height: 1rem;
+                        width: 20vw;
+                        place-content: center;
+                        font-weight: 900;
+                        font-family: "Font Awesome 5 Free";
+                        content: "\f005";
+                        color: $primary;
+                        border-bottom: 2px solid $secondary;
+                    }
+                }
+            }
+            form{
+                background-color: white;
+                font-family: 'Fredericka the Great', cursive;
+                padding: 1rem;
+                margin-top: 5rem;
+                font-weight: bold;
+                border: 2px solid gainsboro;
+                position: relative;
+                margin-bottom: 1rem;
+                border-radius: 1rem;
+                transition-duration: 0.5s;
+                transition-delay: 0.15s;
+                transition-timing-function: ease-in-out;
+                &:hover{
+                    box-shadow: 0px 0px 10px $dark;
+                }
+                i{color: $dark;}
+                .inputBox{
+                    position: relative;
+                    label{
+                        position: relative;
+                        top: 2.5rem;
+                        left: 0;
+                        letter-spacing: 1px;
+                        font-size: 1.5rem;
+                        color: $dark;
+                        transform-origin: top;
+                        transition-duration: 5s;
+                        transition-delay: 1s;
+                    }
+                    .enter{
+                        width: 100%;
+                        padding: 0 0.5rem 0.5rem 0.5rem ;
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        color: $secondary;
+                        letter-spacing: 1px;
+                        margin-top: 0rem;
+                        border: none;
+                        border-bottom: 2px solid $primary;
+                        background-color: transparent;
+                        outline: none;
+                        text-decoration: none;
+                        &:focus{
+                            padding: 0.5rem;
+                            margin-top: 2rem;
+                        }
+                    }
+                }
+                p{
+                    button{
+                        align-items: center;
+                        justify-content: center;
+                        display: flex;
+                        font-size: 1rem;
+                        font-weight: bold;
+                        margin: 2.5rem auto 2.5rem;
+                        transition-duration: 0.5s;
+                        transition-delay: 0.15s;
+                        transition-timing-function: ease-in-out;
+                        i{
+                            font-size: 3rem;
+                            padding-right: 0.5rem;
+                        }
+                        span{
+                            text-align: left;
+                            padding-left: 0.5rem;
+                            p{
+                                font-size: 0.75rem;
+                            }
+                        }
+                    }
+                }
+                div{
+                    div{
+                        span{
+                            align-items: center;
+                            justify-content: center;
+                            display: flex;
+                            width: 100%;
+                            color: $secondary;
+                            font-size: 1rem;
+                            i{
+                                color: $secondary;
+                                padding-right: 0.5rem;
+                            }
+                            p{
+                                padding-left: 0.5rem;
+                            }
+                            a{
+                                color: $warning;
+                            }
+
+                        }
+                        label{
+                            position: relative;
+                            top: 2.5rem;
+                            left: 0;
+                            letter-spacing: 1px;
+                            font-size: 1.5rem;
+                            color: $dark;
+                            transition: 0.5s;
+                        }
+                        .enter-1{
+                            width: 100%;
+                            padding: 0 0.5rem 0.5rem 0.5rem ;
+                            font-size: 1.5rem;
+                            color: $secondary;
+                            letter-spacing: 1px;
+                            margin-top: 0rem;
+                            border: none;
+                            border-bottom: 2px solid $primary;
+                            background-color: transparent;
+                            outline: none;
+                            text-decoration: none;
+                            transition-duration: 0.5s;
+                            transition-delay: 0.15s;
+                            transition-timing-function: ease-in-out;
+                            &:focus{
+                                padding: 0.5rem;
+                                margin-top: 2rem;
+                            }
+                        }
+                    }
+                }
+                button{
+                    font-size: 2rem;
+                    font-weight: bolder;
+                }
+            }
+        }
+        .po{
+            display: none;
+            background-size: cover;
+            padding-top: 7rem;
+            padding-bottom: 3rem;
+            min-height: 100vh;
+            nav{
+                a{
+                    h3{
+                        font-family: 'Sansita Swashed', cursive;
+                        font-size: 1.5rem !important;
+                        text-shadow: 2px 2px 10px $primary;
+                    }
+                }
+                nav{
+                    margin-top: 1rem;
+                }
+            }
+            .container{
+                margin: 5rem auto 3rem;
+                border-radius: 1rem;
+                background-color: white;
+                box-shadow: 0 0 5px pink;
+                display: grid;
+                place-items: center;
+                span{
+                    background-color: $danger;
+                    top: 7rem;
+                    right: 1rem;
+                    color: white;
+                    position: absolute;
+                    overflow: hidden;
+                    border:2px dashed $danger;
+                    background-clip: content-box;
+                    padding: 2.5px;
+                    padding-top: 0.2rem;
+                    width: 3rem;
+                    height: 3rem;
+                    cursor: pointer;
+                    border: 1px dashed white;
+                    border-radius: 1.5rem;
+                    font-size: 1.5rem;
+                    text-align: center;
+                    transition-duration: 0.25s;
+                    transition-delay: 0.05s;
+                    transition-timing-function: ease-in-out;
+                    &:hover{
+                        opacity: 0.7;
+                        box-shadow: 0 2px 2px $dark;
+                        top: 6.5rem;
+                    }
+                }
+                h2{
+                    font-family: 'Fredericka the Great', cursive;
+                    transform: translateY(-1.5rem);
+                    font-weight: bold;
+                    text-align: center;
+                    color: $dark;
+                    text-shadow: 0 0 10px white;
+                    width: 90%;
+                    border-bottom: 2px solid $secondary;
+                }
+                p{
+                    font-family: 'Kalam', cursive;
+                    text-align: center;
+                    color: $dark;
+                }
+                h4{
+                    font-family: 'Kalam', cursive;
+                    width: 80%;
+                    text-align: right;
+                    border-bottom: 2px soild $secondary;
+                }
+                .ref{
+                    width: 100%;
+                    padding: 1rem;
+                    h3{
+                        font-family: 'Sansita Swashed', cursive;
+                        padding-bottom: 0.5rem;
+                        border-bottom: 2px solid $secondary;
+                    }
+                    p{
+                        text-align: left;
+                    }
+                }
+            }
+            
+        }
+        #footer{
+            margin: auto;
+            nav{
+                padding: auto;
+                div{
+                    margin: auto;
+                    #head{
+                        margin-top: 1rem;
+                        width: 100%;
+                        padding-bottom: 2rem;
+                        h2{
+                            margin: auto;
+                            font-family: 'Grenze Gotisch', cursive;
+                            text-align: center;
+                            font-size: 2.5rem;
+                            font-weight: bold;
+                            color: white;
+                            &::after{
+                                position: absolute;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                display: flex;
+                                font-size: 1.5rem;
+                                height: 1rem;
+                                width: 20vw;
+                                place-content: center;
+                                font-weight: 900;
+                                font-family: "Font Awesome 5 Free";
+                                content: "\f005";
+                                color: $primary;
+                                border-bottom: 2px solid $secondary;
+                            }
+                        }
+                    }
+                    #share{
+                        margin: 1rem auto 1rem;
+                        display: flex;
+                        justify-content: center;
+                        .fa {
+                            color: white;
+                            font-size: 2rem;
+                            height: 3rem;
+                            width: 3rem;
+                            text-align: center;
+                            text-decoration: none;
+                            margin: auto;
+                            border-radius: 50%;
+                            background-clip: content-box;
+                            padding: 3px;
+                            border: 2px dashed white;
+                            transition-duration: 0.25s;
+                            transition-delay: 0.05s;
+                            transition-timing-function: ease-in-out;
+                            &:hover {
+                                opacity: 0.5;
+                                transform: translateY(-1rem);
+                            }
+                        }
+                        .fa-whatsapp {
+                            background: #0d943a;
+                            padding: 0.4rem 0.5rem 0.6rem 0.5rem;
+                        }
+                        .fa-facebook {
+                            background: #3B5998;
+                            padding: 0.5rem;
+                        }
+                        .fa-twitter{
+                            background: #55ACEE;
+                            padding: 0.5rem;
+                        }
+                        .fa-telegram{
+                            background: #55ACEE;
+                            padding: 0.4rem 0.55rem 0.6rem 0.45rem;
+                        }
+                    }
+                    #part{
+                        margin: 1rem auto 1rem;
+                        color: white;
+                        padding: 1rem 2rem 1rem 2rem;
+                        @media (max-width:992px) {
+                            border: 2px dashed $primary;
+                            border-radius: 5px;
+                        }
+                        &:hover i{
+                            animation: shake-hand 1s linear;
+                            @keyframes shake-hand {
+                                0%{
+                                    transform-origin: center;
+                                    transform: rotate(0deg);
+                                }
+                                25%{
+                                    transform-origin: center;
+                                    transform: rotate(-25deg);
+                                }
+                                50%{
+                                    transform-origin: center;
+                                    transform: rotate(50deg);
+                                }
+                                75%{
+                                    transform-origin: center;
+                                    transform: rotate(-25deg);
+                                }
+                                100%{
+                                    transform-origin: center;
+                                    transform: rotate(0deg);
+                                }
+                            }
+                        }
+                        h3{
+                            text-align: center;
+                            font-family: 'Grenze Gotisch', cursive;
+                            border-bottom: 2px solid $secondary;
+                            i{
+                                font-size: 2rem;
+                            }
+                        }
+                        p{
+                            font-size: 1.5rem;
+                            text-align: center;
+                            font-family: 'Source Code Pro', monospace;
+                        }
+                    }
+                    #tune{
+                        margin: 1rem auto 1rem;
+                        color: white;
+                        border-left: 2px dashed $primary;
+                        padding: 1rem 2rem 1rem 2rem;
+                        font-family: 'Source Code Pro', monospace;
+                        @media (max-width:992px) {
+                            border: 2px dashed $primary;
+                            border-radius: 5px;
+                        }
+                        h3{
+                            text-align: center;
+                            font-family: 'Grenze Gotisch', cursive;
+                            border-bottom: 2px solid $secondary;
+                        }
+                        #refresh{
+                            z-index: 5;
+                            cursor: pointer;
+                            position: absolute;
+                            height: 4rem;
+                            width: 4rem;
+                            top: 3.25rem;
+                            right: 2rem;
+                            padding:0.3rem 0.5rem 0 0;
+                            text-align: right;
+                            background-image: linear-gradient(to bottom left, $primary, transparent, transparent);
+                            .fa-sync-alt{
+                                border-color: transparent;
+                                background-color: transparent;
+                                color: white;
+                            }
+                            &:hover .fa-sync-alt{
+                                opacity: 1;
+                                animation: re 2s linear;
+                                @keyframes re {
+                                    0%{
+                                        transform-origin: center;
+                                        transform: rotate(0deg);
+                                    }
+                                   33%{
+                                        transform-origin: center;
+                                        transform: rotate(-25deg);
+                                    }
+                                    67%{
+                                        transform-origin: center;
+                                        transform: rotate(385deg);
+                                    }
+                                    100%{
+                                        transform-origin: center;
+                                        transform: rotate(360deg);
+                                    }
+                                }
+                            }
+                        }
+                        .qua{
+                            font-size: 2rem;
+                            opacity: 0.7;
+                        }
+                        &:hover .qua{
+                            opacity: 1;
+                            animation: bell 1s linear;
+                            @keyframes bell {
+                                0%{
+                                    transform-origin: center;
+                                    transform: rotate(0deg);
+                                }
+                                25%{
+                                    transform-origin: center;
+                                    transform: rotate(-25deg);
+                                }
+                                50%{
+                                    transform-origin: center;
+                                    transform: rotate(50deg);
+                                }
+                                75%{
+                                    transform-origin: center;
+                                    transform: rotate(-25deg);
+                                }
+                                100%{
+                                    transform-origin: center;
+                                    transform: rotate(0deg);
+                                }
+                            }
+                        }
+                        #quotes{
+                            text-align: left;
+                            padding: 0 2rem 0 2rem;
+                            font-size: 1.5rem;
+                            user-select: none;
+                        }
+                        #author{
+                            text-align: right;
+                            padding: 0 2rem 0 2rem;
+                            font-size: 1.25rem;
+                            color: $primary;
+                            font-weight: bold;
+                            user-select: none;
+                        }
+                        #quor{
+                            display: none;
+                        }
+                        h4{
+                            cursor: pointer;
+                            z-index: 6;
+                            font-family: 'Sansita Swashed', cursive;
+                            border: 2px dashed white;
+                            background-clip: content-box;
+                            padding: 1rem auto 1rem;
+                            padding: 2px;
+                            border-radius: 1.5rem;
+                            text-align: center;
+                            background-color: $secondary;
+                            color: $dark;
+                        }
+                    }
+                    #des{
+                        margin: 1rem auto 1rem;
+                        color: white;
+                        border-top: 2px dashed $primary;
+                        border-bottom: 2px dashed $primary;
+                        padding: 1rem 2rem 1rem 2rem;
+                        
+                        &:hover i{
+                            animation: craft 1s linear;
+                            @keyframes craft {
+                                0%{
+                                    transform-origin: center;
+                                    transform: rotate(0deg);
+                                }
+                                25%{
+                                    transform-origin: center;
+                                    transform: rotate(-25deg);
+                                }
+                                50%{
+                                    transform-origin: center;
+                                    transform: rotate(50deg);
+                                }
+                                75%{
+                                    transform-origin: center;
+                                    transform: rotate(-25deg);
+                                }
+                                100%{
+                                    transform-origin: center;
+                                    transform: rotate(0deg);
+                                }
+                            }
+                        }
+                        h3{
+                            text-align: center;
+                            font-family: 'Grenze Gotisch', cursive;
+                            border-bottom: 2px solid $secondary;
+                        }
+                        #load{
+                            position: relative;
+                            width: 90%;
+                            height: 10vh;
+                            display: grid;
+                            place-items: center;
+                            h6{
+                                font-family: 'Fredericka the Great', cursive;
+                                font-size: 1.5rem;
+                                color: white;
+                                position: relative;
+                                text-align: center;
+                                &::before{
+                                    content: "Ashish_Chandra";
+                                    width: 100%;
+                                    color: $primary;
+                                    position: absolute;
+                                    top: 0;
+                                    border-right: 2px solid $primary;
+                                    overflow: hidden;
+                                    animation: slide 2s linear infinite;
+                                    @keyframes slide {
+                                        0%{
+                                            width: 0%;
+                                        }
+                                        50%{
+                                            width: 100%;
+                                        }
+                                        100%{
+                                            width: 0%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    span{
+                        width: 100%;
+                        text-align: center;
+                        color: white;
+                        font-family: 'Source Code Pro', monospace;
+                    }
+                }
+            }
+        }
+        #top{
+            a{
+                i{
+                    background-color: white;
+                    position: fixed;
+                    border:2px dashed white;
+                    background-clip: content-box;
+                    padding: 2.5px;
+                    bottom: 1rem;
+                    right: 1rem;
+                    z-index: 9999999999999999999999999;
+                    opacity: 0.8;
+                    color: $dark;
+                    font-size: 3rem;
+                    border-radius: 50%;
+                    transition-duration: 0.25s;
+                    transition-delay: 0.05s;
+                    transition-timing-function: ease-in-out;
+                    &:hover{
+                        opacity: 1;
+                        box-shadow: 0 2px 2px $dark;
+                        bottom: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+    @media print {
+        html, body {
+           display: none;
+        }
+    }
