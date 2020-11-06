@@ -8,6 +8,13 @@
           .catch(error => console.error('Error!', error.message))
       })
 
+      document.getElementById("top").style.display = "none";
+      function al(){
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("top").style.display = "block";
+        alert("Hello, guys! \n          Wishing you very very Happy Diwali... \n          Please, read, response & share... \n                    Thank-you :)\n                                        ~ Ashish Chandra");
+      }
+
       function fun1(){
         document.getElementById("n1").style.marginTop = "2.5rem";
       }

@@ -20,7 +20,13 @@
     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#control" data-offset="0">
+  <body onload="al()" data-spy="scroll" data-target="#control" data-offset="0">
+
+    <!-- preloader -->
+    <div id="loading"></div>
+
+    <!-- navbar -->
+
     <div id="bar">
         <nav id="control" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#"><h3>Some Feelings</h3></a>
@@ -406,7 +412,7 @@
             <div id="author"></div>
             <i class="fas fa-quote-right qua"></i>
             <div id="quor"></div><br>
-            <h4 align="right" onclick="copyToClipboard()"><i class="far fa-copy"></i> Copy To Share</h4>
+            <button align="right" onclick="copyToClipboard()"><i class="far fa-copy"></i> Copy To Share</button>
           </div>
           <div id="des" class="col-12">
             <h3><i class="fas fa-pencil-ruler"></i> Designed By</h3>
