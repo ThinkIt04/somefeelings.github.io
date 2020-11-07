@@ -898,7 +898,6 @@ html #contact_us form button {
 html .po {
   display: none;
   background-size: cover;
-  padding-top: 7rem;
   padding-bottom: 3rem;
   min-height: 100vh;
 }
