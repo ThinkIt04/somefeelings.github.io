@@ -141,8 +141,8 @@ html body .toast {
 html body #home {
   border: 2.5px dashed gainsboro;
   top: 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 58, 64, 0.7)), to(rgba(52, 58, 64, 0.7))), url("../IMAGES/home.jpg");
-  background-image: linear-gradient(rgba(52, 58, 64, 0.7), rgba(52, 58, 64, 0.7)), url("../IMAGES/home.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 58, 64, 0.7)), to(rgba(52, 58, 64, 0.7))), url("../Images/home.jpg");
+  background-image: linear-gradient(rgba(52, 58, 64, 0.7), rgba(52, 58, 64, 0.7)), url("../Images/home.jpg");
   width: 100%;
   background-attachment: fixed;
   background-size: cover;
