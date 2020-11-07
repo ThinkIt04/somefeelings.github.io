@@ -21,8 +21,6 @@ html body {
 }
 
 html body .btn-outline-primary {
-  display: -ms-grid;
-  display: grid;
   cursor: pointer;
   font-size: large;
   border: 2px solid #007bff;
@@ -47,8 +45,6 @@ html body .btn-outline-primary:hover {
 }
 
 html body .btn-outline-succes {
-  display: -ms-grid;
-  display: grid;
   cursor: pointer;
   font-size: large;
   border: 2px solid #28a745;
@@ -194,6 +190,7 @@ html body #bar nav #collapseExample .progress {
 }
 
 html body #m-alert, html body #t-alert, html body #e-alert, html body #c-alert {
+  display: none;
   position: fixed;
   overflow: hidden;
   z-index: 999999999999999999999;
@@ -271,16 +268,11 @@ html body #m-alert h4:hover, html body #t-alert h4:hover, html body #e-alert h4:
           box-shadow: 2px 2px 5px black;
 }
 
-html body #t-alert, html body #e-alert, html body #c-alert {
-  display: none;
-}
-
 html body #home {
   border: 2.5px dashed gainsboro;
   top: 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 58, 64, 0.7)), to(rgba(52, 58, 64, 0.7))), url("../Images/home.jpg");
-  background-image: linear-gradient(rgba(52, 58, 64, 0.7), rgba(52, 58, 64, 0.7)), url("../Images/home.jpg");
   width: 100%;
+  background-image: url(https://images.unsplash.com/photo-1473186505569-9c61870c11f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -290,6 +282,7 @@ html body #home {
   background-clip: content-box;
   padding: 2.5px;
   min-height: 130vh;
+  text-shadow: 0 0 10px black;
 }
 
 html body #home h6 {
@@ -482,6 +475,83 @@ html #gallery {
   width: 100%;
 }
 
+html #gallery #g-alert {
+  position: absolute;
+  overflow: hidden;
+  z-index: 99;
+  left: 50%;
+  width: 358px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-box-shadow: 0 0 50px #343a40;
+          box-shadow: 0 0 50px #343a40;
+  color: #343a40;
+  font-family: 'Sansita Swashed', cursive;
+}
+
+@media (max-width: 535px) {
+  html #gallery #g-alert {
+    width: 70vw;
+  }
+}
+
+@media (min-width: 535px) {
+  html #gallery #g-alert {
+    height: 95vh;
+  }
+}
+
+html #gallery #g-alert h2 {
+  font-family: 'Grenze Gotisch', cursive;
+}
+
+html #gallery #g-alert p {
+  width: 100%;
+}
+
+html #gallery #g-alert span {
+  display: -ms-grid;
+  display: grid;
+  place-self: center;
+}
+
+html #gallery #g-alert .s2 {
+  display: -ms-grid;
+  display: grid;
+  place-self: right;
+}
+
+html #gallery #g-alert h4 {
+  display: -ms-grid;
+  display: grid;
+  place-self: right;
+  cursor: pointer;
+  z-index: 6;
+  font-size: large;
+  font-family: 'Sansita Swashed', cursive;
+  border: 2px solid #343a40;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  background-color: transparent;
+  color: #343a40;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  -webkit-transition-delay: 0.05s;
+          transition-delay: 0.05s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+html #gallery #g-alert h4:hover {
+  background-color: #343a40;
+  color: white;
+  -webkit-box-shadow: 2px 2px 5px black;
+          box-shadow: 2px 2px 5px black;
+}
+
 html #gallery .he {
   background-color: gainsboro;
 }
@@ -603,12 +673,7 @@ html #gallery .row #etc {
           transition-delay: 0.15s;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
-}
-
-@media (max-width: 1200px) {
-  html #gallery .row #etc {
-    margin: 0rem auto 2rem;
-  }
+  margin: 0rem auto 2rem;
 }
 
 html #gallery .row #etc h6 {

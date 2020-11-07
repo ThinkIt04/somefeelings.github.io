@@ -19,7 +19,6 @@ html{
     body{
         background-color: gainsboro;
         .btn-outline-primary{
-            display: grid;
             cursor: pointer;
             font-size: large;
             border: 2px solid $primary;
@@ -38,7 +37,6 @@ html{
             }
         }
         .btn-outline-succes{
-            display: grid;
             cursor: pointer;
             font-size: large;
             border: 2px solid $success;
@@ -155,6 +153,7 @@ html{
             }
         }
         #m-alert, #t-alert, #e-alert, #c-alert{
+            display: none;
             position: fixed;
             overflow: hidden;
             z-index: 999999999999999999999;
@@ -209,14 +208,11 @@ html{
                 }
             }
         }
-        #t-alert, #e-alert, #c-alert{
-            display: none;
-        }
         #home{
             border: 2.5px dashed gainsboro;
             top: 0;
-            background-image: linear-gradient(rgba(52, 58, 64, 0.7),rgba(52, 58, 64, 0.7)), url("../Images/home.jpg");
             width: 100%;
+            background-image: url(https://images.unsplash.com/photo-1473186505569-9c61870c11f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
@@ -225,6 +221,7 @@ html{
             background-clip: content-box;
             padding: 2.5px;
             min-height: 130vh;
+            text-shadow: 0 0 10px black;
             h6{
                 top: 0;
             }
@@ -362,6 +359,60 @@ html{
         }
         #gallery{
             width: 100%;
+            #g-alert{
+                position: absolute;
+                overflow: hidden;
+                z-index: 99;
+                left: 50%;
+                width: 358px;
+                transform: translateX(-50%);
+                transform-origin: center;
+                box-shadow: 0 0 50px $dark;
+                color: $dark;
+                font-family: 'Sansita Swashed', cursive;
+                @media (max-width:535px) {
+                    width: 70vw;
+                }
+                @media (min-width:535px) {
+                    height: 95vh;
+                }
+                h2{
+                    font-family: 'Grenze Gotisch', cursive;
+                }
+                p{
+                    width: 100%;
+                }
+                span{
+                    display: grid;
+                    place-self: center;
+                }
+                .s2{
+                    display: grid;
+                    place-self: right;
+                }
+                h4{
+                    display: grid;
+                    place-self: right;
+                    cursor: pointer;
+                    z-index: 6;
+                    font-size: large;
+                    font-family: 'Sansita Swashed', cursive;
+                    border: 2px solid $dark;
+                    padding: 0.5rem 2rem 0.5rem 2rem;
+                    border-radius: 1.5rem;
+                    text-align: center;
+                    background-color: transparent;
+                    color: $dark;
+                    transition-duration: 0.25s;
+                    transition-delay: 0.05s;
+                    transition-timing-function: ease-in-out;
+                    &:hover{
+                        background-color: $dark;
+                        color: white;
+                        box-shadow: 2px 2px 5px black;
+                    }
+                }
+            }
             .he{
                 background-color: gainsboro;
             }
@@ -455,9 +506,7 @@ html{
                     transition-duration: 0.5s;
                     transition-delay: 0.15s;
                     transition-timing-function: ease-in-out;
-                    @media (max-width:1200px) {
-                        margin: 0rem auto 2rem;
-                    }
+                    margin: 0rem auto 2rem;
                     h6{
                         font-size: 1rem;
                         font-weight: bold;
