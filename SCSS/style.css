@@ -1379,6 +1379,10 @@ html #footer nav div span {
   font-family: 'Source Code Pro', monospace;
 }
 
+html #top {
+  display: none;
+}
+
 html #top a i {
   background-color: white;
   position: fixed;

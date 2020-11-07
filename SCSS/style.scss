@@ -114,7 +114,7 @@ html{
         #home{
             border: 2.5px dashed gainsboro;
             top: 0;
-            background-image: linear-gradient(rgba(52, 58, 64, 0.7),rgba(52, 58, 64, 0.7));
+            background-image: linear-gradient(rgba(52, 58, 64, 0.7),rgba(52, 58, 64, 0.7)), url("../IMAGES/home.jpg");
             width: 100%;
             background-attachment: fixed;
             background-size: cover;
@@ -951,6 +951,7 @@ html{
             }
         }
         #top{
+            display: none;
             a{
                 i{
                     background-color: white;

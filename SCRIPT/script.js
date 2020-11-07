@@ -8,7 +8,6 @@
           .catch(error => console.error('Error!', error.message))
       })
 
-      document.getElementById("top").style.display = "none";
       function al(){
         document.getElementById("loading").style.display = "none";
         document.getElementById("top").style.display = "block";
