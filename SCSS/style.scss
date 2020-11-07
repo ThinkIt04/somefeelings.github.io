@@ -114,7 +114,7 @@ html{
         #home{
             border: 2.5px dashed gainsboro;
             top: 0;
-            background-image: linear-gradient(rgba(52, 58, 64, 0.7),rgba(52, 58, 64, 0.7)), url("https://netstorage-tuko.akamaized.net/images/0fgjhs5esvinf9njc.jpg?imwidth=900");
+            background-image: url("https://netstorage-tuko.akamaized.net/images/0fgjhs5esvinf9njc.jpg?imwidth=900") linear-gradient(rgba(52, 58, 64, 0.7),rgba(52, 58, 64, 0.7));
             width: 100%;
             background-attachment: fixed;
             background-size: cover;
