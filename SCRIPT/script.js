@@ -11,7 +11,7 @@
       })
 
       const myurl = "https://thinkit04.github.io/somefeelings.github.io/";
-      const mytext = " ______________ There are some so beautiful poems...";
+      const mytext = " ______________         There_are_some_so_beautiful_poems...";
       document.getElementById("share").innerHTML = `<a href="whatsapp://send?text=${myurl + mytext}" data-action="share/whatsapp/share" target="_blank" class="fa fa-whatsapp"><a href="https://t.me/share/url?url=https://thinkit04.github.io/somefeelings.github.io/&amp;text=There are some so beautiful poems..." class="fa fa-telegram"></a><a href="http://www.facebook.com/sharer.php?u=https://thinkit04.github.io/somefeelings.github.io/" class="fa fa-facebook"></a><a class="twitter-share-button fa fa-twitter" href="https://twitter.com/home?status=Currently reading ${myurl}"></a>`;
 
       document.getElementById("car1").innerHTML = `<div class="overlay"></div><img src="https://cutewallpaper.org/21/mom-and-son-images/Stock-Illustration-Mom-Son-Vector-Illustration-CQRecords.jpg" class="card-img-top" alt="My First Love Is My Mom"><div class="card-body"><h5 class="card-title">My First Love Is My Mom</h5></div>`;
