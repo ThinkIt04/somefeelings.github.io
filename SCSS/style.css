@@ -502,7 +502,7 @@ html #gallery #g-alert {
 
 @media (min-width: 535px) {
   html #gallery #g-alert {
-    height: 95vh;
+    max-height: 95vh;
   }
 }
 

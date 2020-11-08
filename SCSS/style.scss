@@ -377,7 +377,7 @@ html{
                     width: 70vw;
                 }
                 @media (min-width:535px) {
-                    height: 95vh;
+                    max-height: 95vh;
                 }
                 h2{
                     font-family: 'Grenze Gotisch', cursive;
