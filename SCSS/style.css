@@ -829,7 +829,7 @@ html #contact_us #m-form p button span p {
   font-size: 0.75rem;
 }
 
-html #contact_us #m-form div {
+html #contact_us #m-form .collapse {
   margin-bottom: 1rem;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
@@ -839,12 +839,12 @@ html #contact_us #m-form div {
           transition-timing-function: ease-in-out;
 }
 
-html #contact_us #m-form div:hover {
+html #contact_us #m-form .collapse:hover {
   -webkit-box-shadow: 0px 0px 10px #343a40;
           box-shadow: 0px 0px 10px #343a40;
 }
 
-html #contact_us #m-form div div span {
+html #contact_us #m-form .collapse div span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -859,24 +859,24 @@ html #contact_us #m-form div div span {
   font-size: 1rem;
 }
 
-html #contact_us #m-form div div span i {
+html #contact_us #m-form .collapse div span i {
   color: #6c757d;
   padding-right: 0.5rem;
 }
 
-html #contact_us #m-form div div span p {
+html #contact_us #m-form .collapse div span p {
   padding-left: 0.5rem;
 }
 
-html #contact_us #m-form div div span a {
+html #contact_us #m-form .collapse div span a {
   color: #ffc107;
 }
 
-html #contact_us #m-form div div #sel {
+html #contact_us #m-form .collapse div #sel {
   margin-bottom: 2rem;
 }
 
-html #contact_us #m-form div div #sel .radio {
+html #contact_us #m-form .collapse div #sel .radio {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -896,25 +896,25 @@ html #contact_us #m-form div div #sel .radio {
   font-size: 1rem;
 }
 
-html #contact_us #m-form div div #sel .radio:hover input ~ .checkmark {
+html #contact_us #m-form .collapse div #sel .radio:hover input ~ .checkmark {
   background-color: #6c757d;
 }
 
-html #contact_us #m-form div div #sel .radio input {
+html #contact_us #m-form .collapse div #sel .radio input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
-html #contact_us #m-form div div #sel .radio input:checked ~ .checkmark {
+html #contact_us #m-form .collapse div #sel .radio input:checked ~ .checkmark {
   background-color: #007bff;
 }
 
-html #contact_us #m-form div div #sel .radio input:checked ~ .checkmark:after {
+html #contact_us #m-form .collapse div #sel .radio input:checked ~ .checkmark:after {
   display: block;
 }
 
-html #contact_us #m-form div div #sel .radio .checkmark {
+html #contact_us #m-form .collapse div #sel .radio .checkmark {
   position: absolute;
   top: 0;
   height: 1.5rem;
@@ -926,7 +926,7 @@ html #contact_us #m-form div div #sel .radio .checkmark {
   background-clip: content-box;
 }
 
-html #contact_us #m-form div div #sel .radio .checkmark:after {
+html #contact_us #m-form .collapse div #sel .radio .checkmark:after {
   content: "";
   position: absolute;
   display: none;
@@ -937,19 +937,19 @@ html #contact_us #m-form div div #sel .radio .checkmark:after {
   background: white;
 }
 
-html #contact_us #m-form div div #sel .radio #chma {
+html #contact_us #m-form .collapse div #sel .radio #chma {
   left: 50%;
   -webkit-transform: translateX(-5.5rem);
           transform: translateX(-5.5rem);
 }
 
-html #contact_us #m-form div div #sel .radio #chma2 {
+html #contact_us #m-form .collapse div #sel .radio #chma2 {
   left: 50%;
   -webkit-transform: translateX(-6.25rem);
           transform: translateX(-6.25rem);
 }
 
-html #contact_us #m-form div div label {
+html #contact_us #m-form .collapse div label {
   position: relative;
   top: 2.5rem;
   left: 0;
@@ -960,7 +960,7 @@ html #contact_us #m-form div div label {
   transition: 0.5s;
 }
 
-html #contact_us #m-form div div .enter-1 {
+html #contact_us #m-form .collapse div .enter-1 {
   width: 100%;
   padding: 0 0.5rem 0.5rem 0.5rem;
   font-size: 1.5rem;
@@ -980,7 +980,7 @@ html #contact_us #m-form div div .enter-1 {
           transition-timing-function: ease-in-out;
 }
 
-html #contact_us #m-form div div .enter-1:focus {
+html #contact_us #m-form .collapse div .enter-1:focus {
   padding: 0.5rem;
   margin-top: 2rem;
 }
