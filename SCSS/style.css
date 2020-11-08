@@ -618,6 +618,20 @@ html #gallery .row div .card .overlay {
   background-color: transparent;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html #gallery .row div .card .overlay img {
+  width: 75%;
+  opacity: 0.5;
 }
 
 html #gallery .row div .card .poem {
@@ -659,12 +673,6 @@ html #gallery .row #c2 .alert:hover {
           box-shadow: 0px 0px 10px #343a40;
 }
 
-@media (max-width: 1200px) {
-  html #gallery .row #c2 .alert {
-    margin: 0rem auto 2rem;
-  }
-}
-
 html #gallery .row #etc {
   margin: 7.5rem auto 7.5rem;
   border: 2px dashed #6c757d;
@@ -676,7 +684,13 @@ html #gallery .row #etc {
           transition-delay: 0.15s;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
-  margin: 0rem auto 2rem;
+  margin: 7rem auto 2rem;
+}
+
+@media (max-width: 992px) {
+  html #gallery .row #etc {
+    margin: 0rem auto 2rem;
+  }
 }
 
 html #gallery .row #etc h6 {
@@ -1017,6 +1031,16 @@ html .po .container {
   display: -ms-grid;
   display: grid;
   place-items: center;
+}
+
+html .po .container img {
+  position: fixed;
+  opacity: 0.35;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 html .po .container h2 {
