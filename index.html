@@ -201,14 +201,14 @@
           <h2>Contact Us</h2>
         </div>
         <hr class="he">
-        <form method="POST" autocomplete="off" name="google-sheet">
+        <form id="m-form" method="POST" autocomplete="off" name="google-sheet">
           <div class="inputBox">
             <label><i class="far fa-user"></i> First Name</label>
-            <input id="n1" onchange="fun1()" class="enter" type="text" name="First Names" id="First Name" autocomplete="off">
+            <input id="n1" onchange="fun1()" class="enter" type="text" name="First Names" id="First Name" autocomplete="off" required>
           </div>
           <div class="inputBox">
             <label><i class="far fa-user"></i> Last Name</label>
-            <input  id="n2" onchange="fun2()" class="enter" type="text" name="Last Names" id="Last Name" autocomplete="off">
+            <input  id="n2" onchange="fun2()" class="enter" type="text" name="Last Names" id="Last Name" autocomplete="off" required>
           </div>
           <div class="inputBox">
           <label><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i> Your Rating</label>
@@ -239,11 +239,18 @@
                 <i class="fas fa-info-circle"></i>
                 <p>Hey guys, if you want to publish your poem too with your name, then you have to give me your e-mail id. I promise you it will not be shared. To submit your poem you have to upload it on your google drive and paste the link in the given space.</p>
               </span>
-              <span><a href="https://drive.google.com/drive/u/0/my-drive">www.drive.google.com</a></span>
-              <label><i class="far fa-envelope"></i> E-mail ID</label>
-              <input id="n5" onchange="fun5()" class="enter-1" type="email" name="E-mail IDs" id="E-mail IDs">
-              <label><i class="fas fa-link"></i> Your File URL</label>
-              <input  id="n6" onchange="fun6()" class="enter-1" type="url" name="File URLs" id="File URLs">
+              <span><a href="https://drive.google.com/drive/u/0/my-drive">www.drive.google.com</a></span><br>
+              <span class="row w-100" id="sel">
+                <label class="radio col-xlg-6 col-lg-6 col-md-12 col-sm-12">Yes I want to share.
+                  <input type="radio" name="Check" oninput="dis()">
+                  <span class="checkmark" id="chma"></span>
+                </label>
+                <label class="radio col-xlg-6 col-lg-6 col-md-12 col-sm-12">No I don't want to share.
+                  <input type="radio" name="Check" oninput="disn()">
+                  <span class="checkmark" id="chma2"></span>
+                </label>
+              </span>
+              <div id="checked"></div>
             </div>
           </div>
           <button type="submit" class="btn w-100 btn-lg btn-outline-primary">Submit <i class="far fa-paper-plane"></i></button>
@@ -393,12 +400,7 @@
           <div id="head" class="container col-12">
             <h2>Some Feelings</h2>
           </div>
-          <div id="share" class="container col-12">
-            <a href="https://whatsapp://send?text=https://thinkit04.github.io/somefeelings.github.io/  There are some so beautiful poems..." class="fa fa-whatsapp" data-action="share/whatsapp/share"></a>
-            <a href="https://t.me/share/url?url=https://thinkit04.github.io/somefeelings.github.io/&amp;text=There are some so beautiful poems..." class="fa fa-telegram"></a>
-            <a href="http://www.facebook.com/sharer.php?u=https://thinkit04.github.io/somefeelings.github.io/" class="fa fa-facebook"></a>
-            <a class="twitter-share-button fa fa-twitter" href="https://twitter.com/home?status=Currently reading https://thinkit04.github.io/somefeelings.github.io/"></a>
-          </div>
+          <div id="share1" class="container col-12"></div>
           <div id="part" class="col-xlg-4 col-lg-4 col-md-12 col-sm-12">
             <h3><i class="far fa-handshake"></i> Partners</h3>
             <p>You & Your Friends</p>

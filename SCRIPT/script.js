@@ -2,6 +2,13 @@
       const form = document.forms['google-sheet'];
       const alt = document.getElementById("t-alert");
       const eralt = document.getElementById("e-alert");
+      
+      function dis() {
+        document.getElementById("checked").innerHTML = `<label><i class="far fa-envelope"></i> E-mail ID</label><input id="n5" onchange="fun5()" class="enter-1" type="email" name="E-mail IDs" id="E-mail IDs" required><label><i class="fas fa-link"></i> Your File URL</label><input  id="n6" onchange="fun6()" class="enter-1" type="url" name="File URLs" id="File URLs" required>`;
+      }
+      function disn() {
+        document.getElementById("checked").innerHTML = ``;
+      }
     
       form.addEventListener('submit', e => {
         e.preventDefault()
@@ -13,6 +20,7 @@
       const myurl = "https://thinkit04.github.io/somefeelings.github.io/";
       const mytext = " ______________         There_are_some_so_beautiful_poems...";
       document.getElementById("share").innerHTML = `<a href="whatsapp://send?text=${myurl + mytext}" data-action="share/whatsapp/share" target="_blank" class="fa fa-whatsapp"><a href="https://t.me/share/url?url=https://thinkit04.github.io/somefeelings.github.io/&amp;text=There are some so beautiful poems..." class="fa fa-telegram"></a><a href="http://www.facebook.com/sharer.php?u=https://thinkit04.github.io/somefeelings.github.io/" class="fa fa-facebook"></a><a class="twitter-share-button fa fa-twitter" href="https://twitter.com/home?status=Currently reading ${myurl}"></a>`;
+      document.getElementById("share1").innerHTML = `<a href="whatsapp://send?text=${myurl + mytext}" data-action="share/whatsapp/share" target="_blank" class="fa fa-whatsapp"><a href="https://t.me/share/url?url=https://thinkit04.github.io/somefeelings.github.io/&amp;text=There are some so beautiful poems..." class="fa fa-telegram"></a><a href="http://www.facebook.com/sharer.php?u=https://thinkit04.github.io/somefeelings.github.io/" class="fa fa-facebook"></a><a class="twitter-share-button fa fa-twitter" href="https://twitter.com/home?status=Currently reading ${myurl}"></a>`;
 
       document.getElementById("car1").innerHTML = `<div class="overlay"></div><img src="https://cutewallpaper.org/21/mom-and-son-images/Stock-Illustration-Mom-Son-Vector-Illustration-CQRecords.jpg" class="card-img-top" alt="My First Love Is My Mom"><div class="card-body"><h5 class="card-title">My First Love Is My Mom</h5></div>`;
       document.getElementById("car2").innerHTML = `<div class="overlay"></div><img src="https://static.collectui.com/shots/3608590/rei-4th-of-july-large" class="card-img-top" alt="Our Mother, The Nature"><div class="card-body"><h5 class="card-title">Our Mother, The Nature</h5></div>`;
