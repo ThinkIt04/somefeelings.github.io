@@ -3,6 +3,11 @@
       const alt = document.getElementById("t-alert");
       const eralt = document.getElementById("e-alert");
       
+      const myurl = "https://thinkit04.github.io/somefeelings.github.io/";
+      const mytext = " ______________         There_are_some_so_beautiful_poems...";
+      document.getElementById("share").innerHTML = `<a href="whatsapp://send?text=${myurl + mytext}" data-action="share/whatsapp/share" target="_blank" class="fa fa-whatsapp"><a href="https://t.me/share/url?url=https://thinkit04.github.io/somefeelings.github.io/&amp;text=There are some so beautiful poems..." class="fa fa-telegram"></a><a href="http://www.facebook.com/sharer.php?u=https://thinkit04.github.io/somefeelings.github.io/&t=There_are_some_so_beautiful_poems..." class="fa fa-facebook"></a><a class="twitter-share-button fa fa-twitter" href="https://twitter.com/intent/tweet?text=There_are_some_so_beautiful_poems...&url=https://thinkit04.github.io/somefeelings.github.io/"></a>`;
+      document.getElementById("share1").innerHTML = `<a href="whatsapp://send?text=${myurl + mytext}" data-action="share/whatsapp/share" target="_blank" class="fa fa-whatsapp"><a href="https://t.me/share/url?url=https://thinkit04.github.io/somefeelings.github.io/&amp;text=There are some so beautiful poems..." class="fa fa-telegram"></a><a href="http://www.facebook.com/sharer.php?u=https://thinkit04.github.io/somefeelings.github.io/&t=There_are_some_so_beautiful_poems..." class="fa fa-facebook"></a><a class="twitter-share-button fa fa-twitter" href="https://twitter.com/intent/tweet?text=There_are_some_so_beautiful_poems...&url=https://thinkit04.github.io/somefeelings.github.io/"></a>`;
+
       function dis() {
         document.getElementById("checked").innerHTML = `<label><i class="far fa-envelope"></i> E-mail ID</label><input id="n5" onchange="fun5()" class="enter-1" type="email" name="E-mail IDs" id="E-mail IDs" required><label><i class="fas fa-link"></i> Your File URL</label><input  id="n6" onchange="fun6()" class="enter-1" type="url" name="File URLs" id="File URLs" required>`;
       }
@@ -16,11 +21,6 @@
           .then(response => {alt.style.display = "block";})
           .catch(error => {eralt.style.display = "block";})
       })
-
-      const myurl = "https://thinkit04.github.io/somefeelings.github.io/";
-      const mytext = " ______________         There_are_some_so_beautiful_poems...";
-      document.getElementById("share").innerHTML = `<a href="whatsapp://send?text=${myurl + mytext}" data-action="share/whatsapp/share" target="_blank" class="fa fa-whatsapp"><a href="https://t.me/share/url?url=https://thinkit04.github.io/somefeelings.github.io/&amp;text=There are some so beautiful poems..." class="fa fa-telegram"></a><a href="http://www.facebook.com/sharer.php?u=https://thinkit04.github.io/somefeelings.github.io/" class="fa fa-facebook"></a><a class="twitter-share-button fa fa-twitter" href="https://twitter.com/home?status=Currently reading ${myurl}"></a>`;
-      document.getElementById("share1").innerHTML = `<a href="whatsapp://send?text=${myurl + mytext}" data-action="share/whatsapp/share" target="_blank" class="fa fa-whatsapp"><a href="https://t.me/share/url?url=https://thinkit04.github.io/somefeelings.github.io/&amp;text=There are some so beautiful poems..." class="fa fa-telegram"></a><a href="http://www.facebook.com/sharer.php?u=https://thinkit04.github.io/somefeelings.github.io/" class="fa fa-facebook"></a><a class="twitter-share-button fa fa-twitter" href="https://twitter.com/home?status=Currently reading ${myurl}"></a>`;
 
       function al(){
         document.getElementById("loading").style.display = "none";
@@ -75,7 +75,7 @@
         let rnum = Math.floor(Math.random() * 10);
         quotes.innerText = `${realData[rnum].text}...`;
         author.innerText = `- ${realData[rnum].author}`;
-        quors.innerHTML = `${realData[rnum].text}...         _____________${realData[rnum].author}   _________________   https://thinkit04.github.io/somefeelings.github.io/  _______________   Please_visit,_response_&_share...`
+        quors.innerHTML = `${realData[rnum].text}...         _____________${realData[rnum].author}   _________________   https://thinkit04.github.io/somefeelings.github.io/#quotes  _______________   Please_visit,_response_&_share...`;
       };
       const getQuotes = async () => {
         const api = "https://type.fit/api/quotes";
