@@ -268,6 +268,11 @@ html body #m-alert h4:hover, html body #t-alert h4:hover, html body #e-alert h4:
           box-shadow: 2px 2px 5px black;
 }
 
+html body #du {
+  position: absolute;
+  opacity: 0;
+}
+
 html body #home {
   border: 2.5px dashed gainsboro;
   top: 0;
@@ -627,11 +632,6 @@ html #gallery .row div .card .overlay {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-html #gallery .row div .card .overlay img {
-  width: 75%;
-  opacity: 0;
 }
 
 html #gallery .row div .card .poem {

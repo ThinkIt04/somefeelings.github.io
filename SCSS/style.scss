@@ -208,6 +208,10 @@ html{
                 }
             }
         }
+        #du{
+            position: absolute;
+            opacity: 0;
+        }
         #home{
             border: 2.5px dashed gainsboro;
             top: 0;
@@ -467,10 +471,6 @@ html{
                             display: flex;
                             align-items: center;
                             justify-content: center;
-                            img{
-                                width: 75%;
-                                opacity: 0;
-                            }
                         }
                         .poem{
                             position: absolute;
