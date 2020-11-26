@@ -243,54 +243,47 @@
         <form id="m-form" method="POST" autocomplete="off" name="google-sheet">
           <div class="inputBox">
             <label><i class="far fa-user"></i> First Name</label>
-            <input id="n1" onchange="fun1()" class="enter" type="text" name="First Names" id="First Name" autocomplete="off" required>
+            <input id="n1" class="enter" type="text" name="First Names" id="First Name" autocomplete="off" required>
           </div>
           <div class="inputBox">
             <label><i class="far fa-user"></i> Last Name</label>
-            <input  id="n2" onchange="fun2()" class="enter" type="text" name="Last Names" id="Last Name" autocomplete="off" required>
+            <input  id="n2" class="enter" type="text" name="Last Names" id="Last Name" autocomplete="off" required>
           </div>
           <div class="inputBox">
-          <label><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i> Your Rating</label>
-          <select id="n3" onchange="fun3()" class="enter" id="Your Rating" name="Ratings">
-            <option value=""></option>
+          <label><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i> Your<span style="color: white;">_</span>Rating</label>
+          <select id="n3" class="enter" id="Your Rating" name="Ratings">
             <option value="1">Not Good 😫</option>
             <option value="2">Needs Improvement 😣</option>
             <option value="3">It's Ok 🤨</option>
             <option value="4">Good 😃</option>
-            <option value="5">Best 😆</option>
+            <option value="5" selected>Best 😆</option>
           </select>
           </div>
           <div class="inputBox">
             <label><i class="far fa-comment"></i> Comment</label>
-            <textarea id="n4" onchange="fun4()" class="enter" name="Comments" id="Comment" cols="1" rows="1" autocomplete="off"></textarea>
+            <textarea id="n4" class="enter" name="Comments" id="Comment" cols="1" rows="1" autocomplete="off" required></textarea>
           </div>
-          <p>
-            <button class="btn btn-lg w-70 btn-outline-success" type="button" data-toggle="collapse" data-target="#collapseEx" aria-expanded="false" aria-controls="collapseExample">
+          <div id="p2" class="card card-body">
+            <div>
               <i class="far fa-file-word"></i>
               <span> Share Your Poem To Get Published.<br>
                 <p>( Only If You Want )</p>
               </span>
-            </button>
-          </p>
-          <div  class="collapse" id="collapseEx">
-            <div class="card card-body">
-              <span>
-                <i class="fas fa-info-circle"></i>
-                <p>Hey guys, if you want to publish your poem too with your name, then you have to give me your e-mail id. I promise you it will not be shared. To submit your poem you have to upload it on your google drive and paste the link in the given space.</p>
-              </span>
-              <span><a href="https://drive.google.com/drive/u/0/my-drive">www.drive.google.com</a></span><br>
-              <span class="row w-100" id="sel">
-                <label class="radio col-xlg-6 col-lg-6 col-md-12 col-sm-12">Yes I want to share.
-                  <input type="radio" name="Check" oninput="dis()">
-                  <span class="checkmark" id="chma"></span>
-                </label>
-                <label class="radio col-xlg-6 col-lg-6 col-md-12 col-sm-12">No I don't want to share.
-                  <input type="radio" name="Check" oninput="disn()" checked>
-                  <span class="checkmark" id="chma2"></span>
-                </label>
-              </span>
-              <div id="checked"></div>
             </div>
+            <br><br>
+            <span class="old">
+               <i class="fas fa-info-circle"></i>
+               <p>Hey guys, if you want to publish your poem too with your name, then you have to give me your e-mail id. I promise you it will not be shared. To submit your poem you have to upload it on your google drive and paste the link in the given space.</p>
+            </span>
+            <span class="old"><a href="https://drive.google.com/drive/u/0/my-drive">www.drive.google.com</a></span><br>
+            <div class="toggle-wrapper">
+              <span id="ask">Do you want to share your poem?</span><br>
+              <label class="switch">
+                <input id="chang" onclick="change()" type="checkbox" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div id="checked"></div>
           </div>
           <button type="submit" class="btn w-100 btn-lg btn-outline-primary">Submit <i class="far fa-paper-plane"></i></button>
         </form>

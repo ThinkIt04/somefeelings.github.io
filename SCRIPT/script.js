@@ -8,11 +8,13 @@
       document.getElementById("share").innerHTML = `<a href="whatsapp://send?text=${myurl + mytext}" data-action="share/whatsapp/share" target="_blank" class="fa fa-whatsapp"><a href="https://t.me/share/url?url=https://thinkit04.github.io/somefeelings.github.io/&amp;text=There are some so beautiful poems..." class="fa fa-telegram"></a><a href="http://www.facebook.com/sharer.php?u=https://thinkit04.github.io/somefeelings.github.io/&t=There_are_some_so_beautiful_poems..." class="fa fa-facebook"></a><a class="twitter-share-button fa fa-twitter" href="https://twitter.com/intent/tweet?text=There_are_some_so_beautiful_poems...&url=https://thinkit04.github.io/somefeelings.github.io/"></a>`;
       document.getElementById("share1").innerHTML = `<a href="whatsapp://send?text=${myurl + mytext}" data-action="share/whatsapp/share" target="_blank" class="fa fa-whatsapp"><a href="https://t.me/share/url?url=https://thinkit04.github.io/somefeelings.github.io/&amp;text=There are some so beautiful poems..." class="fa fa-telegram"></a><a href="http://www.facebook.com/sharer.php?u=https://thinkit04.github.io/somefeelings.github.io/&t=There_are_some_so_beautiful_poems..." class="fa fa-facebook"></a><a class="twitter-share-button fa fa-twitter" href="https://twitter.com/intent/tweet?text=There_are_some_so_beautiful_poems...&url=https://thinkit04.github.io/somefeelings.github.io/"></a>`;
 
-      function dis() {
-        document.getElementById("checked").innerHTML = `<label><i class="far fa-envelope"></i> E-mail ID</label><input id="n5" onchange="fun5()" class="enter-1" type="email" name="E-mail IDs" id="E-mail IDs" required><label><i class="fas fa-link"></i> Your File URL</label><input  id="n6" onchange="fun6()" class="enter-1" type="url" name="File URLs" id="File URLs" required>`;
-      }
-      function disn() {
-        document.getElementById("checked").innerHTML = ``;
+      function change(){
+        if (document.getElementById('chang').checked==true){
+          document.getElementById('checked').innerHTML = ``;
+        }
+        else{
+          document.getElementById('checked').innerHTML = `<label><i class="far fa-envelope"></i> E-mail ID</label><input id="n5" class="enter-1" type="email" name="E-mail IDs" id="E-mail IDs" required><label><i class="fas fa-link"></i> Your File URL</label><input id="n6" class="enter-1" type="url" name="File URLs" id="File URLs" required>`;
+        }
       }
     
       form.addEventListener('submit', e => {
@@ -44,26 +46,6 @@
         document.getElementById("g-alert").style.display = "none";
       };
 
-      function fun1(){
-        document.getElementById("n1").style.marginTop = "2.5rem";
-      }
-      function fun2(){
-        document.getElementById("n2").style.marginTop = "2.5rem";
-      }
-      function fun3(){
-        document.getElementById("n3").style.marginTop = "2.5rem";
-      }
-      function fun4(){
-        document.getElementById("n4").style.marginTop = "2.5rem";
-      }
-      function fun5(){
-        document.getElementById("n5").style.marginTop = "2.5rem";
-      }
-      function fun6(){
-        document.getElementById("n6").style.marginTop = "2.5rem";
-      }
-
-      
       const quotes = document.getElementById("quotes");
       const author = document.getElementById("author");
       const quors = document.getElementById("quor");
