@@ -579,29 +579,52 @@ html{
                 i{color: $dark;}
                 .inputBox{
                     position: relative;
-                    transition-duration: 0.5s;
-                    transition-delay: 0.15s;
-                    transition-timing-function: ease-in-out;
-                    label{
+                    margin-bottom: 1rem;
+                    #rates{
                         position: relative;
-                        top: 2.5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: row-reverse;
+                        input[type=radio]{
+                            height: 0;
+                            width: 0;
+                            margin: 0 0 0 0.5rem;
+                            &:checked ~ label>i{
+                                color: goldenrod;
+                            }
+                            &:hover ~ label>i{
+                                color: goldenrod;
+                            }
+                        }
+                        i{
+                            font-size: 2rem;
+                            color: $secondary;
+                            background-color: transparent;
+                            &:hover{
+                                color: goldenrod;
+                            }
+                        }
+                    }
+                    .bor{
+                        position: absolute;
+                        margin: 0;
+                        top: 0;
                         left: 0;
                         letter-spacing: 1px;
                         font-size: 1.5rem;
                         color: $dark;
-                        transition: 0.5s;
-                        transform-origin: top;
-                        transition-duration: 5s;
-                        transition-delay: 1s;
                     }
                     .enter{
+                        left: 0;
                         width: 100%;
                         padding: 0 0.5rem 0.5rem 0.5rem ;
                         font-size: 1.5rem;
                         font-weight: bold;
                         color: $secondary;
                         letter-spacing: 1px;
-                        margin-top: 0rem;
+                        margin-top: 1.5rem;
+                        height: 0;
                         border: none;
                         border-bottom: 2px solid $primary;
                         background-color: transparent;
@@ -611,11 +634,11 @@ html{
                         transition-delay: 0.15s;
                         transition-timing-function: ease-in-out;
                         &:focus{
-                            padding: 0.5rem;
+                            height: 2.5rem;
                             margin-top: 2rem;
                         }
                         &:valid{
-                            padding: 0.5rem;
+                            height: 2.5rem;
                             margin-top: 2rem;
                         }
                     }
@@ -627,42 +650,31 @@ html{
                     transition-delay: 0.15s;
                     transition-timing-function: ease-in-out;
                     div{
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-around;
-                        i{
-                            font-size: 3rem;
-                            padding-right: 0.5rem;
-                        }
                         span{
                             text-align: center;
-                            font-size: 1.5rem;
-                            text-align: left;
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-around;
-                            flex-direction: column;
-                            p{
-                                font-size: 0.75rem;
-                            }
+                            font-size: 1.25rem;
+                            text-align: center;margin-bottom: 0;
                         }
                     }
                     .toggle-wrapper {
-                        height: 10rem;
                         overflow: hidden;
-                        position: relative;
                         display: flex;
+                        align-items: center;
+                        justify-content: center;
                         flex-direction: column;
+                        margin-bottom: 1rem;
                         #ask{
                             transform: translateY(-2rem);
                             position: absolute;
                             text-align: center;
+                            margin-top: 0.5rem;
                         }
                         .switch {
                             position: relative;
-                            width: 5rem;
+                            width: 3rem;
                             display: inline-block;
-                            height: 2.5rem;
+                            height: 1.5rem;
+                            margin-top: 0.5rem;
                             input { 
                                 opacity: 0;
                                 width: 0;
@@ -671,7 +683,7 @@ html{
                                     background-color: #dc3545;
                                 }
                                 &:checked + .slider:before {
-                                    transform: translateX(2.25rem);
+                                    transform: translateX(1rem);
                                     content: "\f057";
                                 }
                             }
@@ -679,14 +691,14 @@ html{
                                 position: absolute;
                                 content: "Yes";
                                 transform: translateX(-3rem);
-                                font-size: 1.5rem;
+                                font-size: 1.25rem;
                                 color: $secondary;
                             }
                             &::after{
                                 position: absolute;
                                 content: "No";
-                                transform: translateX(5.9rem);
-                                font-size: 1.5rem;
+                                transform: translateX(3.9rem);
+                                font-size: 1.25rem;
                                 color: $secondary;
                             }
                             .slider {
@@ -705,11 +717,11 @@ html{
                                     font-family: "Font Awesome 5 Free";
                                     content: "\f058";
                                     text-shadow: 0 0 2px black;
-                                    height: 1.9rem;
-                                    width: 1.9rem;
+                                    height: 0.9rem;
+                                    width: 0.9rem;
+                                    font-size: 1.25rem;
                                     bottom: 0.825rem;
                                     left: 0.4rem;
-                                    font-size: 2rem;
                                     background-color: transparent;
                                     color: white;
                                     transition: .4s ease;
@@ -739,40 +751,49 @@ html{
                     }
                     #checked{
                         display: block;
-                        label{
+                        .inputBox{
                             position: relative;
-                            top: 2.5rem;
-                            left: 0;
-                            letter-spacing: 1px;
-                            font-size: 1.5rem;
-                            color: $dark;
-                            transition: 0.5s;
-                            i{
+                            padding-top: 0;
+                            margin-bottom: 1rem;
+                            label{
+                                position: absolute;
+                                margin: 0;
+
+                                top: 0;
+                                left: 0;
+                                letter-spacing: 1px;
                                 font-size: 1.5rem;
+                                color: $dark;
+                                i{
+                                    font-size: 1.5rem;
+                                }
                             }
-                        }
-                        .enter-1{
-                            width: 100%;
-                            padding: 0 0.5rem 0.5rem 0.5rem ;
-                            font-size: 1.5rem;
-                            color: $secondary;
-                            letter-spacing: 1px;
-                            margin-top: 0rem;
-                            border: none;
-                            border-bottom: 2px solid $primary;
-                            background-color: transparent;
-                            outline: none;
-                            text-decoration: none;
-                            transition-duration: 0.5s;
-                            transition-delay: 0.15s;
-                            transition-timing-function: ease-in-out;
-                            &:focus{
-                                padding: 0.5rem;
-                                margin-top: 2rem;
-                            }
-                            &:valid{
-                                padding: 0.5rem;
-                                margin-top: 2rem;
+                            .enter-1{
+                                left: 0;
+                                width: 100%;
+                                padding: 0 0.5rem 0.5rem 0.5rem ;
+                                font-size: 1.5rem;
+                                font-weight: bold;
+                                color: $secondary;
+                                letter-spacing: 1px;
+                                margin-top: 0rem;
+                                height: 0;
+                                border: none;
+                                border-bottom: 2px solid $primary;
+                                background-color: transparent;
+                                outline: none;
+                                text-decoration: none;
+                                transition-duration: 0.5s;
+                                transition-delay: 0.15s;
+                                transition-timing-function: ease-in-out;
+                                &:focus{
+                                    height: 2.5rem;
+                                    margin-top: 2rem;
+                                }
+                                &:valid{
+                                    height: 2.5rem;
+                                    margin-top: 2rem;
+                                }
                             }
                         }
                     }

@@ -53,6 +53,7 @@ html body .btn-outline-succes {
   text-align: center;
   background-color: transparent;
   color: #28a745;
+  outline: none;
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s;
   -webkit-transition-delay: 0.05s;
@@ -771,39 +772,70 @@ html #contact_us #m-form i {
 
 html #contact_us #m-form .inputBox {
   position: relative;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  -webkit-transition-delay: 0.15s;
-          transition-delay: 0.15s;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
+  margin-bottom: 1rem;
 }
 
-html #contact_us #m-form .inputBox label {
+html #contact_us #m-form .inputBox #rates {
   position: relative;
-  top: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+html #contact_us #m-form .inputBox #rates input[type=radio] {
+  height: 0;
+  width: 0;
+  margin: 0 0 0 0.5rem;
+}
+
+html #contact_us #m-form .inputBox #rates input[type=radio]:checked ~ label > i {
+  color: goldenrod;
+}
+
+html #contact_us #m-form .inputBox #rates input[type=radio]:hover ~ label > i {
+  color: goldenrod;
+}
+
+html #contact_us #m-form .inputBox #rates i {
+  font-size: 2rem;
+  color: #6c757d;
+  background-color: transparent;
+}
+
+html #contact_us #m-form .inputBox #rates i:hover {
+  color: goldenrod;
+}
+
+html #contact_us #m-form .inputBox .bor {
+  position: absolute;
+  margin: 0;
+  top: 0;
   left: 0;
   letter-spacing: 1px;
   font-size: 1.5rem;
   color: #343a40;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-transform-origin: top;
-          transform-origin: top;
-  -webkit-transition-duration: 5s;
-          transition-duration: 5s;
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
 }
 
 html #contact_us #m-form .inputBox .enter {
+  left: 0;
   width: 100%;
   padding: 0 0.5rem 0.5rem 0.5rem;
   font-size: 1.5rem;
   font-weight: bold;
   color: #6c757d;
   letter-spacing: 1px;
-  margin-top: 0rem;
+  margin-top: 1.5rem;
+  height: 0;
   border: none;
   border-bottom: 2px solid #007bff;
   background-color: transparent;
@@ -818,12 +850,12 @@ html #contact_us #m-form .inputBox .enter {
 }
 
 html #contact_us #m-form .inputBox .enter:focus {
-  padding: 0.5rem;
+  height: 2.5rem;
   margin-top: 2rem;
 }
 
 html #contact_us #m-form .inputBox .enter:valid {
-  padding: 0.5rem;
+  height: 2.5rem;
   margin-top: 2rem;
 }
 
@@ -838,55 +870,29 @@ html #contact_us #m-form #p2 {
           transition-timing-function: ease-in-out;
 }
 
-html #contact_us #m-form #p2 div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-html #contact_us #m-form #p2 div i {
-  font-size: 3rem;
-  padding-right: 0.5rem;
-}
-
 html #contact_us #m-form #p2 div span {
   text-align: center;
-  font-size: 1.5rem;
-  text-align: left;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-html #contact_us #m-form #p2 div span p {
-  font-size: 0.75rem;
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 0;
 }
 
 html #contact_us #m-form #p2 .toggle-wrapper {
-  height: 10rem;
   overflow: hidden;
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 1rem;
 }
 
 html #contact_us #m-form #p2 .toggle-wrapper #ask {
@@ -894,13 +900,15 @@ html #contact_us #m-form #p2 .toggle-wrapper #ask {
           transform: translateY(-2rem);
   position: absolute;
   text-align: center;
+  margin-top: 0.5rem;
 }
 
 html #contact_us #m-form #p2 .toggle-wrapper .switch {
   position: relative;
-  width: 5rem;
+  width: 3rem;
   display: inline-block;
-  height: 2.5rem;
+  height: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 html #contact_us #m-form #p2 .toggle-wrapper .switch input {
@@ -914,8 +922,8 @@ html #contact_us #m-form #p2 .toggle-wrapper .switch input:checked + .slider {
 }
 
 html #contact_us #m-form #p2 .toggle-wrapper .switch input:checked + .slider:before {
-  -webkit-transform: translateX(2.25rem);
-          transform: translateX(2.25rem);
+  -webkit-transform: translateX(1rem);
+          transform: translateX(1rem);
   content: "\f057";
 }
 
@@ -924,16 +932,16 @@ html #contact_us #m-form #p2 .toggle-wrapper .switch::before {
   content: "Yes";
   -webkit-transform: translateX(-3rem);
           transform: translateX(-3rem);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: #6c757d;
 }
 
 html #contact_us #m-form #p2 .toggle-wrapper .switch::after {
   position: absolute;
   content: "No";
-  -webkit-transform: translateX(5.9rem);
-          transform: translateX(5.9rem);
-  font-size: 1.5rem;
+  -webkit-transform: translateX(3.9rem);
+          transform: translateX(3.9rem);
+  font-size: 1.25rem;
   color: #6c757d;
 }
 
@@ -957,11 +965,11 @@ html #contact_us #m-form #p2 .toggle-wrapper .switch .slider:before {
   font-family: "Font Awesome 5 Free";
   content: "\f058";
   text-shadow: 0 0 2px black;
-  height: 1.9rem;
-  width: 1.9rem;
+  height: 0.9rem;
+  width: 0.9rem;
+  font-size: 1.25rem;
   bottom: 0.825rem;
   left: 0.4rem;
-  font-size: 2rem;
   background-color: transparent;
   color: white;
   -webkit-transition: .4s ease;
@@ -1002,28 +1010,36 @@ html #contact_us #m-form #p2 #checked {
   display: block;
 }
 
-html #contact_us #m-form #p2 #checked label {
+html #contact_us #m-form #p2 #checked .inputBox {
   position: relative;
-  top: 2.5rem;
+  padding-top: 0;
+  margin-bottom: 1rem;
+}
+
+html #contact_us #m-form #p2 #checked .inputBox label {
+  position: absolute;
+  margin: 0;
+  top: 0;
   left: 0;
   letter-spacing: 1px;
   font-size: 1.5rem;
   color: #343a40;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
-html #contact_us #m-form #p2 #checked label i {
+html #contact_us #m-form #p2 #checked .inputBox label i {
   font-size: 1.5rem;
 }
 
-html #contact_us #m-form #p2 #checked .enter-1 {
+html #contact_us #m-form #p2 #checked .inputBox .enter-1 {
+  left: 0;
   width: 100%;
   padding: 0 0.5rem 0.5rem 0.5rem;
   font-size: 1.5rem;
+  font-weight: bold;
   color: #6c757d;
   letter-spacing: 1px;
   margin-top: 0rem;
+  height: 0;
   border: none;
   border-bottom: 2px solid #007bff;
   background-color: transparent;
@@ -1037,13 +1053,13 @@ html #contact_us #m-form #p2 #checked .enter-1 {
           transition-timing-function: ease-in-out;
 }
 
-html #contact_us #m-form #p2 #checked .enter-1:focus {
-  padding: 0.5rem;
+html #contact_us #m-form #p2 #checked .inputBox .enter-1:focus {
+  height: 2.5rem;
   margin-top: 2rem;
 }
 
-html #contact_us #m-form #p2 #checked .enter-1:valid {
-  padding: 0.5rem;
+html #contact_us #m-form #p2 #checked .inputBox .enter-1:valid {
+  height: 2.5rem;
   margin-top: 2rem;
 }
 

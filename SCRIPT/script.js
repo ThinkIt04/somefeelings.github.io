@@ -13,7 +13,7 @@
           document.getElementById('checked').innerHTML = ``;
         }
         else{
-          document.getElementById('checked').innerHTML = `<label><i class="far fa-envelope"></i> E-mail ID</label><input id="n5" class="enter-1" type="email" name="E-mail IDs" id="E-mail IDs" required><label><i class="fas fa-link"></i> Your File URL</label><input id="n6" class="enter-1" type="url" name="File URLs" id="File URLs" required>`;
+          document.getElementById('checked').innerHTML = `<div class="inputBox"><label for="n5"><i class="far fa-envelope"></i> E-mail ID</label><br><input id="n5" class="enter-1" type="email" name="E-mail IDs" id="E-mail IDs" required></div><div class="inputBox"><label for="n6"><i class="fas fa-link"></i> Your File URL</label><br><input id="n6" class="enter-1" type="url" name="File URLs" id="File URLs" required></div>`;
         }
       }
     
