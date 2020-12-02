@@ -20,6 +20,15 @@ html body {
   background-color: gainsboro;
 }
 
+html body::-webkit-scrollbar {
+  width: 5px;
+}
+
+html body::-webkit-scrollbar-thumb {
+  background-color: #343a40;
+  border-radius: 2.5px;
+}
+
 html body .btn-outline-primary {
   cursor: pointer;
   font-size: large;
