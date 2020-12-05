@@ -29,12 +29,27 @@
     <script type="text/javascript">
       document.write(unescape('%3c%73%63%72%69%70%74%20%73%72%63%3d%22%68%74%74%70%73%3a%2f%2f%6b%69%74%2e%66%6f%6e%74%61%77%65%73%6f%6d%65%2e%63%6f%6d%2f%34%62%38%66%38%32%33%32%30%32%2e%6a%73%22%20%63%72%6f%73%73%6f%72%69%67%69%6e%3d%22%61%6e%6f%6e%79%6d%6f%75%73%22%3e%3c%2f%73%63%72%69%70%74%3e'));
     </script>
+    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
 
   </head>
   <body onload="al()" data-spy="scroll" data-target="#control" data-offset="0">
 
     <!-- preloader -->
     <div id="loading"></div>
+
+    <!-- dark-mode -->
+    <label id="dark">
+      <input class='toggle-checkbox' id="toggle" type='checkbox'></input>
+      <div class='toggle-slot'>
+        <div class='sun-icon-wrapper'>
+          <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+        </div>
+        <div class='toggle-button'></div>
+        <div class='moon-icon-wrapper'>
+          <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+        </div>
+      </div>
+    </label>
 
     <!-- navbar -->
 
@@ -155,7 +170,50 @@
         <h1 align="center">
           <span>welcome </span>to some Feelings!
         </h1>
-        <h3 id="type" align="center">We have <span>beautiful</span> poems <br>in <span>english</span> as well as in <span>हिंदी</span>.<br> So, please<br><p align="center" id="wo">read, feel, response and share.</p></h3>
+        <h3 id="type" align="center">We have <span>beautiful</span> poems <br>in <span>english</span> as well as in <span>हिंदी</span>.<br> So, please <span class="typed-text"></span><span class="cursor">&nbsp;</span></p></h3>
+        <script>
+          const typedTextSpan = document.querySelector(".typed-text");
+          const cursorSpan = document.querySelector(".cursor");
+
+          const textArray = ["read it.", "feel it.", "response us.", "share it."];
+          const typingDelay = 200;
+          const erasingDelay = 100;
+          const newTextDelay = 2000; // Delay between current and next text
+          let textArrayIndex = 0;
+          let charIndex = 0;
+
+          function type() {
+            if (charIndex < textArray[textArrayIndex].length) {
+              if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+              typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+              charIndex++;
+              setTimeout(type, typingDelay);
+            } 
+            else {
+              cursorSpan.classList.remove("typing");
+              setTimeout(erase, newTextDelay);
+            }
+          }
+
+          function erase() {
+            if (charIndex > 0) {
+              if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+              typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+              charIndex--;
+              setTimeout(erase, erasingDelay);
+            } 
+            else {
+              cursorSpan.classList.remove("typing");
+              textArrayIndex++;
+              if(textArrayIndex>=textArray.length) textArrayIndex=0;
+              setTimeout(type, typingDelay + 1100);
+            }
+          }
+
+          document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+            if(textArray.length) setTimeout(type, newTextDelay + 250);
+          });
+        </script>
         <div id="share"></div>
       </div>
       <div class="slide-in wow bounceInUp current" data-wow-delay="1s" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-delay: 1s; animation-name: bounceInUp;">
@@ -265,7 +323,7 @@
             <input  id="n2" class="enter" type="text" name="Last Names" id="Last Name" autocomplete="off" required>
           </div>
           <div class="inputBox">
-            <label class="bor" style="position: relative;"> Your<span style="color: white;">_</span>Rating</label>
+            <label class="bor" style="position: relative;"> Your<span>_</span>Rating</label>
             <div id="rates">
               <input type="radio" name="Ratings" id="1s" value="5"><label for="1s" class="sta"><i class="fas fa-star"></i></label>
               <input type="radio" name="Ratings" id="2s" value="4"><label for="2s" class="sta"><i class="fas fa-star"></i></label>
