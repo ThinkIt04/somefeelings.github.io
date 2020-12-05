@@ -84,7 +84,6 @@
       const v4 = document.getElementById("contact_us");
       const v5 = document.getElementById("footer");
       const v6 = document.getElementById("top");
-      const da = document.getElementById("dark");
       function hide1(){
         p1.style.display = "block";
         p2.style.display = "none";
@@ -98,7 +97,6 @@
         v4.style.display = "none";
         v5.style.display = "none";
         v6.style.display = "none";
-        da.classList.add("switch");
       };
       function hide2(){
         p1.style.display = "none";
@@ -113,7 +111,6 @@
         v4.style.display = "none";
         v5.style.display = "none";
         v6.style.display = "none";
-        da.classList.add("switch");
       };
       function hide3(){
         p1.style.display = "none";
@@ -128,7 +125,6 @@
         v4.style.display = "none";
         v5.style.display = "none";
         v6.style.display = "none";
-        da.classList.add("switch");
       };
       function hide4(){
         p1.style.display = "none";
@@ -143,7 +139,6 @@
         v4.style.display = "none";
         v5.style.display = "none";
         v6.style.display = "none";
-        da.classList.add("switch");
       };
       function hide5(){
         p1.style.display = "none";
@@ -158,7 +153,6 @@
         v4.style.display = "none";
         v5.style.display = "none";
         v6.style.display = "none";
-        da.classList.add("switch");
       };
       function hide6(){
         p1.style.display = "none";
@@ -173,7 +167,6 @@
         v4.style.display = "none";
         v5.style.display = "none";
         v6.style.display = "none";
-        da.classList.add("switch");
       };
 
       function cut(){
@@ -189,7 +182,6 @@
         v4.style.display = "block";
         v5.style.display = "block";
         v6.style.display = "block";
-        da.classList.remove("switch");
       };
       
       function copyToClipboard() {
@@ -210,16 +202,3 @@
       hi3.innerHTML = 'क्या होती है यह दोस्ती,<br>जिंदगी की सबसे यादकर पल होती है दोस्ती । <br>जिंदगी की एक अच्छी सलाह होती है दोस्ती । <br>जिंदगी भर हमारे लिए सोचती है दोस्ती । <br>बातों को संभाल कर रखती है दोस्ती । <br>भूलना मत इसे दुखती है यह दोस्ती । <br>क्या होती है यह दोस्ती,<br>जिंदगी की परवाह करती नही दोस्ती । <br>जिंदगी के पैसों से मतलब रखती नही दोस्ती । <br>हमारे लिए भला ही करती है दोस्ती । <br>जिंदगी को हमारी समझती है दोस्ती । <br>भूलना मत इसे दुखती है यह दोस्ती । <br>भूलना मत इसे दुखती है यह दोस्ती ।। ';
       const hi4 = document.getElementById("h4");
       hi4.innerHTML = 'करता है सलाम यह जहान आपकी हिम्मत को , <br>आप बचा रहें है हमे , <br>खतरे में डालकर अपनी जान को , <br>हम दाद देते हैं इस इंतकाम की घड़ी में आपकी मेहनत को , <br>इसलिए धन्यवाद करते हैं हम , <br>आपकी मेहनत को और आपको ।। ';
-
-      const toggle = document.getElementById('toggle');
-      const body = document.body;
-
-      toggle.addEventListener('input', (e) => {
-        const isChecked = e.target.checked;
-        
-        if(isChecked) {
-          body.classList.add('dark-theme');
-        } else {
-          body.classList.remove('dark-theme');
-        }
-      });

@@ -16,124 +16,8 @@ html {
   transition: all 0.2s ease-in-out;
 }
 
-html body.dark-theme {
-  background-color: #5e5e5e;
-}
-
-html body.dark-theme #m-alert, html body.dark-theme #t-alert, html body.dark-theme #e-alert, html body.dark-theme #c-alert {
-  background-color: #3d3d3d;
-  color: #dcdcdc;
-}
-
-html body.dark-theme #m-alert h4, html body.dark-theme #t-alert h4, html body.dark-theme #e-alert h4, html body.dark-theme #c-alert h4 {
-  border-color: #dcdcdc;
-  color: #dcdcdc;
-}
-
-html body.dark-theme #m-alert h4:hover, html body.dark-theme #t-alert h4:hover, html body.dark-theme #e-alert h4:hover, html body.dark-theme #c-alert h4:hover {
-  background-color: #dcdcdc;
-  color: #3d3d3d;
-  -webkit-box-shadow: 2px 2px 5px black;
-          box-shadow: 2px 2px 5px black;
-}
-
-html body.dark-theme #gallery #head h2 {
-  color: #dcdcdc;
-}
-
-html body.dark-theme #gallery #g-alert, html body.dark-theme #gallery #car1, html body.dark-theme #gallery #car2, html body.dark-theme #gallery #car3, html body.dark-theme #gallery #car4, html body.dark-theme #gallery #car5, html body.dark-theme #gallery #car6, html body.dark-theme #gallery #etc {
-  background-color: #3d3d3d;
-  color: #dcdcdc;
-}
-
-html body.dark-theme #gallery #g-alert h4, html body.dark-theme #gallery #car1 h4, html body.dark-theme #gallery #car2 h4, html body.dark-theme #gallery #car3 h4, html body.dark-theme #gallery #car4 h4, html body.dark-theme #gallery #car5 h4, html body.dark-theme #gallery #car6 h4, html body.dark-theme #gallery #etc h4 {
-  border-color: #dcdcdc;
-  color: #dcdcdc;
-}
-
-html body.dark-theme #gallery #g-alert h4:hover, html body.dark-theme #gallery #car1 h4:hover, html body.dark-theme #gallery #car2 h4:hover, html body.dark-theme #gallery #car3 h4:hover, html body.dark-theme #gallery #car4 h4:hover, html body.dark-theme #gallery #car5 h4:hover, html body.dark-theme #gallery #car6 h4:hover, html body.dark-theme #gallery #etc h4:hover {
-  background-color: #dcdcdc;
-  color: #3d3d3d;
-  -webkit-box-shadow: 2px 2px 5px black;
-          box-shadow: 2px 2px 5px black;
-}
-
-html body.dark-theme #gallery #c2 .alert {
-  background-color: #007bff;
-  color: #acd3fd;
-}
-
-html body.dark-theme #contact_us #head h2 {
-  color: #dcdcdc;
-}
-
-html body.dark-theme #contact_us #m-form {
-  background-color: #3d3d3d;
-  color: #afafaf;
-}
-
-html body.dark-theme #contact_us #m-form i {
-  color: #6c757d;
-}
-
-html body.dark-theme #contact_us #m-form .inputBox .enter {
-  color: #6c757d;
-}
-
-html body.dark-theme #contact_us #m-form .inputBox .bor {
-  color: #afafaf;
-}
-
-html body.dark-theme #contact_us #m-form .inputBox .bor span {
-  color: #3d3d3d;
-}
-
-html body.dark-theme #contact_us #m-form #p2 {
-  background-color: #3d3d3d;
-  border: 2px solid #afafaf;
-  color: #afafaf;
-}
-
-html body.dark-theme #contact_us #m-form #p2 #checked .inputBox .enter-1 {
-  color: #6c757d;
-}
-
-html body.dark-theme #contact_us #m-form #p2 #checked .inputBox label {
-  color: #afafaf;
-}
-
-html body.dark-theme #contact_us #m-form #p2 #checked .inputBox label span {
-  color: #3d3d3d;
-}
-
-html body.dark-theme .po .container {
-  background-color: #343a40;
-  color: #afafaf;
-}
-
-html body.dark-theme .po .container p, html body.dark-theme .po .container .ref {
-  color: #afafaf;
-}
-
-html body.dark-theme .po .container h2 {
-  text-shadow: 0 0.75rem 0.5rem gainsboro;
-  color: #343a40;
-}
-
-html body.dark-theme .po .container h5 {
-  border-color: #dcdcdc;
-  color: #dcdcdc;
-}
-
-html body.dark-theme .po .container h5:hover {
-  background-color: #dcdcdc;
-  color: #3d3d3d;
-  -webkit-box-shadow: 2px 2px 5px black;
-          box-shadow: 2px 2px 5px black;
-}
-
 html body {
-  background-color: #dcdcdc;
+  background-color: gainsboro;
 }
 
 html body::-webkit-scrollbar {
@@ -143,142 +27,6 @@ html body::-webkit-scrollbar {
 html body::-webkit-scrollbar-thumb {
   background-color: #343a40;
   border-radius: 2.5px;
-}
-
-html body #dark {
-  position: fixed;
-  top: 1.5rem;
-  right: 4rem;
-  z-index: 99999999999;
-}
-
-@media (max-width: 358px) {
-  html body #dark {
-    top: 0.75rem;
-  }
-}
-
-@media (max-width: 991.98px) {
-  html body #dark {
-    top: 1.15rem;
-    right: 4.5rem;
-  }
-}
-
-@media (min-width: 991.98px) {
-  html body #dark {
-    top: 2rem;
-    right: 9.5rem;
-  }
-}
-
-html body #dark .toggle-checkbox {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-html body #dark .toggle-slot {
-  position: relative;
-  height: 2rem;
-  width: 4rem;
-  border: 5px solid #6c757d;
-  border-radius: 2rem;
-  background-color: gainsboro;
-  -webkit-transition: background-color 250ms;
-  transition: background-color 250ms;
-}
-
-html body #dark .toggle-checkbox:checked ~ .toggle-slot {
-  background-color: #343a40;
-}
-
-html body #dark .toggle-button {
-  -webkit-transform: translate(2.2rem, 0.2rem);
-          transform: translate(2.2rem, 0.2rem);
-  position: absolute;
-  height: 1rem;
-  width: 1rem;
-  border-radius: 50%;
-  background-color: #ffeccf;
-  -webkit-box-shadow: inset 0px 0px 0px 0.75rem #ffbb52;
-          box-shadow: inset 0px 0px 0px 0.75rem #ffbb52;
-  -webkit-transition: background-color 250ms, border-color 250ms, -webkit-transform 500ms cubic-bezier(0.26, 2, 0.46, 0.71);
-  transition: background-color 250ms, border-color 250ms, -webkit-transform 500ms cubic-bezier(0.26, 2, 0.46, 0.71);
-  transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(0.26, 2, 0.46, 0.71);
-  transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(0.26, 2, 0.46, 0.71), -webkit-transform 500ms cubic-bezier(0.26, 2, 0.46, 0.71);
-}
-
-html body #dark .toggle-checkbox:checked ~ .toggle-slot .toggle-button {
-  background-color: #485367;
-  -webkit-box-shadow: inset 0px 0px 0px 0.75em white;
-          box-shadow: inset 0px 0px 0px 0.75em white;
-  -webkit-transform: translate(0.2rem, 0.2rem);
-          transform: translate(0.2rem, 0.2rem);
-}
-
-html body #dark .sun-icon {
-  position: absolute;
-  height: 1rem;
-  width: 1rem;
-  color: #ffbb52;
-}
-
-html body #dark .sun-icon-wrapper {
-  position: absolute;
-  height: 1rem;
-  width: 1rem;
-  opacity: 1;
-  -webkit-transform: translate(0.2rem, 0.2rem) rotate(15deg);
-          transform: translate(0.2rem, 0.2rem) rotate(15deg);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-transition: opacity 150ms, -webkit-transform 500ms cubic-bezier(0.26, 2, 0.46, 0.71);
-  transition: opacity 150ms, -webkit-transform 500ms cubic-bezier(0.26, 2, 0.46, 0.71);
-  transition: opacity 150ms, transform 500ms cubic-bezier(0.26, 2, 0.46, 0.71);
-  transition: opacity 150ms, transform 500ms cubic-bezier(0.26, 2, 0.46, 0.71), -webkit-transform 500ms cubic-bezier(0.26, 2, 0.46, 0.71);
-}
-
-html body #dark .toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
-  opacity: 0;
-  -webkit-transform: translate(2rem, 0.2rem) rotate(0deg);
-          transform: translate(2rem, 0.2rem) rotate(0deg);
-}
-
-html body #dark .moon-icon {
-  position: absolute;
-  height: 1rem;
-  width: 1rem;
-  color: white;
-}
-
-html body #dark .moon-icon-wrapper {
-  position: absolute;
-  height: 1rem;
-  width: 1rem;
-  opacity: 0;
-  -webkit-transform: translate(1rem, 0.2rem) rotate(0deg);
-          transform: translate(1rem, 0.2rem) rotate(0deg);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-transition: opacity 150ms, -webkit-transform 500ms cubic-bezier(0.26, 2.5, 0.46, 0.71);
-  transition: opacity 150ms, -webkit-transform 500ms cubic-bezier(0.26, 2.5, 0.46, 0.71);
-  transition: opacity 150ms, transform 500ms cubic-bezier(0.26, 2.5, 0.46, 0.71);
-  transition: opacity 150ms, transform 500ms cubic-bezier(0.26, 2.5, 0.46, 0.71), -webkit-transform 500ms cubic-bezier(0.26, 2.5, 0.46, 0.71);
-}
-
-html body #dark .toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
-  opacity: 1;
-  -webkit-transform: translate(2.2rem, 0.2rem) rotate(-15deg);
-          transform: translate(2.2rem, 0.2rem) rotate(-15deg);
-}
-
-html body #dark.switch {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
 }
 
 html body .btn-outline-primary {
@@ -332,7 +80,7 @@ html body .btn-outline-succes:hover {
 
 html body #loading {
   position: fixed;
-  z-index: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+  z-index: 999999999999999999999999999999999999999999999999999;
   width: 100%;
   height: 100vh;
   background: #262626 url("https://i.pinimg.com/originals/a1/df/4a/a1df4abd7d0e32e269905f6cdc840c19.gif") no-repeat center;
@@ -539,7 +287,7 @@ html body #home {
   border: 2.5px dashed gainsboro;
   top: 0;
   width: 100%;
-  background-image: url(https://totalsecuritysummit.co.uk/wp-content/uploads/2017/03/Lost-art-of-letter-writing-600x315-cropped.jpg);
+  background-image: url(https://images.unsplash.com/photo-1473186505569-9c61870c11f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -607,51 +355,6 @@ html body #home #wel #type #wo {
   border-radius: 1rem;
   margin: 0.5rem;
   padding: 0.5rem 0rem 0.3rem 0rem;
-}
-
-html body #home #wel #type .cursor {
-  display: inline-block;
-  background-color: #ccc;
-  margin-left: 0.1rem;
-  width: 3px;
-  -webkit-animation: blink 1s infinite;
-          animation: blink 1s infinite;
-}
-
-@-webkit-keyframes blink {
-  0% {
-    background-color: #ccc;
-  }
-  49% {
-    background-color: #ccc;
-  }
-  50% {
-    background-color: transparent;
-  }
-  99% {
-    background-color: transparent;
-  }
-  100% {
-    background-color: #ccc;
-  }
-}
-
-@keyframes blink {
-  0% {
-    background-color: #ccc;
-  }
-  49% {
-    background-color: #ccc;
-  }
-  50% {
-    background-color: transparent;
-  }
-  99% {
-    background-color: transparent;
-  }
-  100% {
-    background-color: #ccc;
-  }
 }
 
 html body #home #wel #share {
@@ -1130,10 +833,6 @@ html #contact_us #m-form .inputBox .bor {
   letter-spacing: 1px;
   font-size: 1.5rem;
   color: #343a40;
-}
-
-html #contact_us #m-form .inputBox .bor span {
-  color: white;
 }
 
 html #contact_us #m-form .inputBox .enter {
