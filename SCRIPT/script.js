@@ -27,6 +27,7 @@
       function al(){
         document.getElementById("loading").style.display = "none";
         document.getElementById("top").style.display = "block";
+        document.getElementById("dark").style.display = "block";
         document.getElementById("m-alert").style.display = "block";
       }
 
